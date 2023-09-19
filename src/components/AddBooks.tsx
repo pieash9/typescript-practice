@@ -23,12 +23,10 @@ const bookReducer = (state: BookType[], action: addBookAction) => {
 
 const AddBooks = () => {
   const { register, handleSubmit } = useForm<FormData>();
-  const [books, dispatch] = useReducer(bookReducer, initialState);
+  const [booksData, dispatch] = useReducer(bookReducer, initialState);
   const onSubmit: SubmitHandler<FormData> = (data: BookType) => {
     dispatch({ type: "addBook", payload: data });
-    console.log(data);
   };
-  console.log(books);
   return (
     <div>
       <h3 className="text-2xl font-medium text-center mt-10 mb-5">Add Book</h3>
@@ -90,6 +88,24 @@ const AddBooks = () => {
             </form>
           </div>
         </div>
+      </div>
+
+      <div className="grid grid-cols-4 gap-4 mt-10">
+        {booksData.length > 0 &&
+          booksData.map((book) => {
+            const { booksCategory, price, description, title } = book;
+            return (
+              <div
+                className="border border-gray-300 rounded p-4"
+                key={book.title}
+              >
+                <h3 className="text-xl font-medium">{title}</h3>
+                <p className="">Category: {booksCategory}</p>
+                <p className="">Price: ${price}</p>
+                <p className="">Description: {description.slice(0, 25)}...</p>
+              </div>
+            );
+          })}
       </div>
     </div>
   );
