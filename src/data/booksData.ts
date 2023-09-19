@@ -1,4 +1,4 @@
-import { BookType } from "../components/Books";
+import { BookType } from "../interface/bookInterface";
 
 const booksData: BookType[] = [
   {
@@ -7,7 +7,7 @@ const booksData: BookType[] = [
     price: 12.99,
     description: "A comedy science fiction series created by Douglas Adams.",
     image: "/book1.jpeg",
-    books_category: "Science Fiction",
+    booksCategory: "Science Fiction",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const booksData: BookType[] = [
     price: 10.99,
     description: "A Pulitzer Prize-winning novel by Harper Lee.",
     image: "/book2.jpg",
-    books_category: "Classics",
+    booksCategory: "Classics",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const booksData: BookType[] = [
     price: 19.99,
     description: "A fantasy novel written by J. R. R. Tolkien.",
     image: "/book3.jpg",
-    books_category: "Fantasy",
+    booksCategory: "Fantasy",
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ const booksData: BookType[] = [
     price: 11.99,
     description: "A dystopian novel by Suzanne Collins.",
     image: "/book4.jpg",
-    books_category: "Dystopian",
+    booksCategory: "Dystopian",
   },
   {
     id: 5,
@@ -39,7 +39,7 @@ const booksData: BookType[] = [
     price: 9.99,
     description: "A novel by Paulo Coelho.",
     image: "/book5.jpg",
-    books_category: "Self-Help",
+    booksCategory: "Self-Help",
   },
   {
     id: 6,
@@ -47,7 +47,7 @@ const booksData: BookType[] = [
     price: 14.99,
     description: "A crime novel by Stieg Larsson.",
     image: "/book6.jpg",
-    books_category: "Thriller",
+    booksCategory: "Thriller",
   },
   {
     id: 7,
@@ -55,7 +55,7 @@ const booksData: BookType[] = [
     price: 10.99,
     description: "A coming-of-age novel by J. D. Salinger.",
     image: "/book7.jpg",
-    books_category: "Classics",
+    booksCategory: "Classics",
   },
 ];
 
