@@ -22,10 +22,11 @@ const bookReducer = (state: BookType[], action: addBookAction) => {
 };
 
 const AddBooks = () => {
-  const { register, handleSubmit } = useForm<FormData>();
+  const { register, handleSubmit, reset } = useForm<FormData>();
   const [booksData, dispatch] = useReducer(bookReducer, initialState);
   const onSubmit: SubmitHandler<FormData> = (data: BookType) => {
     dispatch({ type: "addBook", payload: data });
+    reset();
   };
   return (
     <div>
